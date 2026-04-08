@@ -314,7 +314,7 @@ const Index = () => {
             Acesso imediato • PDF para imprimir • Garantia 7 dias
           </p>
           <a
-            href="#upsell-checkout"
+            href="https://pay.kiwify.com.br/emgjhL6"
             className="w-full mt-1 py-4 rounded-2xl text-white font-bold text-base text-center cursor-pointer transition-all duration-300 hover:scale-105 block leading-snug"
             style={{
               fontFamily: "Poppins, sans-serif",
@@ -415,7 +415,7 @@ const Index = () => {
         }}
       >
         <a
-          href="#upsell-checkout"
+          href="https://pay.kiwify.com.br/emgjhL6"
           className="w-full py-3 rounded-2xl text-white font-bold text-sm text-center cursor-pointer block leading-snug"
           style={{
             fontFamily: "Poppins, sans-serif",
