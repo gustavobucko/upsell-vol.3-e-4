@@ -417,6 +417,8 @@ const Index = () => {
         }}
       >
         <a
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://pay.kiwify.com.br/emgjhL6"
           className="w-full py-3 rounded-2xl text-white font-bold text-sm text-center cursor-pointer block leading-snug"
           style={{
