@@ -314,6 +314,8 @@ const Index = () => {
             Acesso imediato • PDF para imprimir • Garantia 7 dias
           </p>
           <a
+            target="_blank"
+            rel="noopener noreferrer"
             href="https://pay.kiwify.com.br/emgjhL6"
             className="w-full mt-1 py-4 rounded-2xl text-white font-bold text-base text-center cursor-pointer transition-all duration-300 hover:scale-105 block leading-snug"
             style={{
