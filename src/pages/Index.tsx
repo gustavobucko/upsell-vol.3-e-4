@@ -313,22 +313,38 @@ const Index = () => {
           >
             Acesso imediato • PDF para imprimir • Garantia 7 dias
           </p>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://pay.kiwify.com.br/emgjhL6"
-            className="w-full mt-1 py-4 rounded-2xl text-white font-bold text-base text-center cursor-pointer transition-all duration-300 hover:scale-105 block leading-snug"
-            style={{
-              fontFamily: "Poppins, sans-serif",
-              background:
-                "linear-gradient(135deg, rgb(255, 107, 0), rgb(255, 69, 0))",
-              boxShadow: "rgba(255, 69, 0, 0.5) 0px 6px 28px",
-              animation: "ctaPulse 2.5s ease-in-out infinite",
-            }}
+          <div
+            style={{ textAlign: "center" }}
+            id="kiwify-upsell-emgjhL6"
+            data-upsell-url=""
+            data-downsell-url="https://downritualr.netlify.app/"
           >
-            <span className="block">✅ SIM! QUERO OS VOLUMES 3 E 4</span>
-            <span className="block">POR APENAS R$ 29,90</span>
-          </a>
+            <button
+              id="kiwify-upsell-trigger-emgjhL6"
+              className="w-full mt-1 py-4 rounded-2xl text-white font-bold text-base text-center cursor-pointer transition-all duration-300 hover:scale-105 leading-snug"
+              style={{
+                fontFamily: "Poppins, sans-serif",
+                background:
+                  "linear-gradient(135deg, rgb(255, 107, 0), rgb(255, 69, 0))",
+                boxShadow: "rgba(255, 69, 0, 0.5) 0px 6px 28px",
+                animation: "ctaPulse 2.5s ease-in-out infinite",
+                border: "none",
+              }}
+            >
+              <span className="block">✅ SIM! QUERO OS VOLUMES 3 E 4</span>
+              <span className="block">POR APENAS R$ 29,90</span>
+            </button>
+            <div
+              id="kiwify-upsell-cancel-trigger-emgjhL6"
+              className="mt-4 cursor-pointer text-sm underline"
+              style={{
+                fontFamily: "Poppins, sans-serif",
+                color: "rgb(153, 153, 153)",
+              }}
+            >
+              Não, obrigada. Prefiro continuar sem os volumes 3 e 4.
+            </div>
+          </div>
         </div>
       </section>
 
@@ -393,19 +409,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Decline link */}
-      <div className="flex justify-center pb-6 px-4">
-        <a
-          href="#"
-          className="text-xs text-center cursor-pointer hover:underline"
-          style={{
-            fontFamily: "Poppins, sans-serif",
-            color: "rgb(153, 153, 153)",
-          }}
-        >
-          Não, obrigada. Prefiro continuar sem os volumes 3 e 4.
-        </a>
-      </div>
+      {/* Spacer for mobile fixed bar */}
+      <div className="pb-6" />
 
       {/* Fixed bottom CTA (mobile) */}
       <div
@@ -416,10 +421,11 @@ const Index = () => {
           backdropFilter: "blur(10px)",
         }}
       >
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://pay.kiwify.com.br/emgjhL6"
+        <button
+          onClick={() => {
+            const trigger = document.getElementById("kiwify-upsell-trigger-emgjhL6");
+            if (trigger) trigger.click();
+          }}
           className="w-full py-3 rounded-2xl text-white font-bold text-sm text-center cursor-pointer block leading-snug"
           style={{
             fontFamily: "Poppins, sans-serif",
@@ -427,11 +433,12 @@ const Index = () => {
               "linear-gradient(135deg, rgb(255, 107, 0), rgb(255, 69, 0))",
             boxShadow: "rgba(255, 69, 0, 0.45) 0px 4px 20px",
             animation: "ctaPulseFixed 2.5s ease-in-out infinite",
+            border: "none",
           }}
         >
           <span className="block">✅ SIM! QUERO OS VOLUMES 3 E 4</span>
           <span className="block">POR APENAS R$ 29,90</span>
-        </a>
+        </button>
       </div>
     </main>
   );
